@@ -31,8 +31,8 @@ module.exports = override(
     style: true,
   }),
   addWebpackAlias({
-    '@': path.resolve(__dirname, './src/'),
-    '@components': path.resolve(__dirname, './src/components'),
+    '@': path.resolve(__dirname, 'src'),
+    '@components': path.resolve(__dirname, 'src/components'),
   }),
   addBundleVisualizer({}, true),
 );

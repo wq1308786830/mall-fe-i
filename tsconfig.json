@@ -21,8 +21,9 @@
   },
   "includes": [
     "./typings.d.ts"
- ],
+  ],
   "include": [
     "src"
-  ]
+  ],
+  "extends": "./paths.json"
 }
