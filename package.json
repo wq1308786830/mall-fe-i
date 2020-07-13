@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd-mobile": "^2.3.3",
+    "axios": "^0.19.2",
     "lib-flexible": "^0.3.2",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
@@ -11,7 +12,7 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "dotenv -e .env.development react-app-rewired start ",
     "build": "react-app-rewired build",
     "build-analyze": "react-app-rewired build --analyze",
     "test": "react-app-rewired test --env=jsdom",
@@ -42,7 +43,9 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
     "babel-plugin-import": "^1.13.0",
+    "cross-env": "^7.0.2",
     "customize-cra": "^1.0.0",
+    "dotenv-cli": "^3.2.0",
     "less": "^3.11.3",
     "less-loader": "^5.0.0",
     "postcss-px2rem": "^0.3.0",
