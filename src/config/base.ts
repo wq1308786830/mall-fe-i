@@ -37,7 +37,6 @@ const PAY_DEBUG_BASE_URL = `https://mall-pay.${envName}.tinman.cn`;
 const DELIVERY_DEBUG_BASE_URL = `https://mall-delivery.${envName}.tinman.cn`;
 const REDEEMCODE_DEBUG_BASE_URL = `https://mall-redeemcode.${envName}.tinman.cn`;
 const CASHBACK_DEBUG_BASE_URL = `https://mall-cashback.${envName}.tinman.cn`;
-// const CASHBACK_DEBUG_BASE_URL = `http://10.100.29.197:8080`;
 
 // 购买完的激活页面地址
 const EXCHANGE_URL: ExtensiveObject = {
