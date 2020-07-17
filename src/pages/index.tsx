@@ -5,7 +5,7 @@ import React from 'react';
 import logo from '../logo.svg';
 import { Button } from 'antd-mobile';
 
-import css from './index.module.less';
+import css from './index.less';
 
 const Index = () => {
   return (

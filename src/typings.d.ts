@@ -26,7 +26,14 @@ interface ApiMapItem {
   baseURL: string;
   key?: string;
   prefix?: string;
+  data?: string;
   serialized?: boolean;
+}
+
+interface RequestOptions {
+  method: string;
+  baseURL: string;
+  data?: any;
 }
 
 interface ApiMap {

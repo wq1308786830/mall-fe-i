@@ -21,7 +21,7 @@ export default {
   },
   '/api/item/detail': {
     action: '/product/detail',
-    method: 'GET',
+    method: 'POST',
     key: 'API_GET_PRODUCT_DETAIL',
     baseURL: MALL_BASE_URL,
   },

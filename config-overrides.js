@@ -22,9 +22,12 @@ module.exports = override(
     modifyVars: {
       '@primary-color': '#1DA57A', // for example, you use Ant Design to change theme color.
     },
-    cssLoaderOptions: {}, // .less file used css-loader option, not all CSS file.
+    cssLoaderOptions: {
+      // config to remove word 'module' in less file name
+      modules: { localIdentName: '[local]_[hash:base64:5]' },
+    }, // .less file used css-loader option, not all CSS file.
     cssModules: {
-      localIdentName: '[local]--[hash:base64:5]', // if you use CSS Modules, and custom `localIdentName`, default is '[local]--[hash:base64:5]'.
+      // localIdentName: '[local]--[hash:base64:5]', // if you use CSS Modules, and custom `localIdentName`, default is '[local]--[hash:base64:5]'.
     },
   }),
   addPostcssPlugins([px2rem({ remUnit: 100 })]), // addPostcssPlugins must appear after addLessLoader

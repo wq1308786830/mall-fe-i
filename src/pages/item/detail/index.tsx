@@ -7,18 +7,22 @@ import { useQuery } from '@/config/routers';
 import Comp from '@components';
 import { getItemDetail } from '@/services/goods';
 
+import img from '@/assets/images/icon-trumpet.png';
+import css from './index.less';
+
 const Index = () => {
-  const params = useParams();
+  // const params = useParams();
   const query = useQuery();
-  console.log(params);
-  console.log(query);
 
   useEffect(() => {
+    console.log(query);
     getItemDetail(query);
   }, [query]);
   return (
-    <div>
+    <div className={css.actionContent}>
       detail
+      <div className={css.iconCheckedSquare} />
+      <img src={img} alt="" />
       <Comp />
     </div>
   );
