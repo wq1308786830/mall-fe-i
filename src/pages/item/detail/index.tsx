@@ -22,6 +22,7 @@ const Index = () => {
     <div className={css.actionContent}>
       detail
       <div className={css.iconCheckedSquare} />
+      <div className={css.trumpet} />
       <img src={img} alt="" />
       <Comp />
     </div>

@@ -1,9 +1,9 @@
 /**
- * 注意
- * customize-cra @1.0.0 严格对应 less-loader @5.0.0
+ * Cautions
+ * customize-cra@1.0.0 strictly corresponds to less-loader@5.0.0
  */
 const path = require('path');
-const webpack = require('webpack'); // webpack不要自己安装，取cra自带的，不然会有冲突
+const webpack = require('webpack'); // do not install webpack yourself
 const px2rem = require('postcss-px2rem');
 const {
   override,
@@ -19,6 +19,8 @@ module.exports = override(
   addLessLoader({
     strictMath: true,
     noIeCompat: true,
+    relativeUrls: false, // Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.
+    javascriptEnabled: true,
     modifyVars: {
       '@primary-color': '#1DA57A', // for example, you use Ant Design to change theme color.
     },
@@ -26,9 +28,6 @@ module.exports = override(
       // config to remove word 'module' in less file name
       modules: { localIdentName: '[local]_[hash:base64:5]' },
     }, // .less file used css-loader option, not all CSS file.
-    cssModules: {
-      // localIdentName: '[local]--[hash:base64:5]', // if you use CSS Modules, and custom `localIdentName`, default is '[local]--[hash:base64:5]'.
-    },
   }),
   addPostcssPlugins([px2rem({ remUnit: 100 })]), // addPostcssPlugins must appear after addLessLoader
   fixBabelImports('import', {
