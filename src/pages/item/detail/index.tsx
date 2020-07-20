@@ -2,9 +2,8 @@
  *
  */
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { useQuery } from '@/config/routers';
-import Comp from '@components';
+import Comp from '@/components';
 import { getItemDetail } from '@/services/goods';
 
 import img from '@/assets/images/icon-trumpet.png';

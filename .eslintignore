@@ -1,0 +1,8 @@
+!.*.js
+typings
+react-app-env.d.ts
+serviceWorker.ts
+node_modules
+dist/
+config/
+jweixin-1.6.0.js

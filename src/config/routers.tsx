@@ -81,7 +81,7 @@ export const RouteWithSubRoutes = (route: RouterConfig) => {
  * 根路由
  * @constructor
  */
-export const ComposedRouter = () => {
+const ComposedRouter = () => {
   return (
     <Router>
       <Switch>
