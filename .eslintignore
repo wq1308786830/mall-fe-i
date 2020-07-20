@@ -1,0 +1,9 @@
+!.*.js
+typings.d.ts
+node_modules
+serviceWorker.ts
+setupTests.ts
+dist/
+config/
+jweixin-1.6.0.js
+

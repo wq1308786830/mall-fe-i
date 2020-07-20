@@ -69,6 +69,7 @@ export const closest = (el: any, selector: any) => {
     if (matchesSelector.call(el, selector)) {
       return el;
     }
+    // eslint-disable-next-line no-param-reassign
     el = el.parentElement;
   }
   return null;
@@ -115,8 +116,8 @@ export const codeVerifier = (code: string) => {
  */
 export const isImg = (str: string) => /\.(png|jpg|jpeg|gif|svg|webp)$/.test(str);
 
-export const throttle = (fun: Function, delay: number, time: number) => {
-  let timeout: number;
+export const throttle = (fun: () => void, delay: number, time: number) => {
+  let timeout: any;
   let startTime = new Date().getTime();
 
   return () => {
