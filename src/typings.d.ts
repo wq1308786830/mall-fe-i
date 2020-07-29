@@ -30,179 +30,16 @@ interface ApiMapItem {
   serialized?: boolean;
 }
 
-interface RequestOptions {
-  method: string;
-  baseURL: string;
-  data?: any;
-}
-
 interface ApiMap {
   [key: string]: ApiMapItem;
 }
 
+interface IProps<T> {
+  location: { query: T };
+}
+
 interface ExtensiveObject {
   [key: string]: any;
-}
-
-interface RcForm {
-  getFieldsValue: Function;
-  getFieldValue: Function;
-  getFieldInstance: Function;
-  setFieldsValue: Function;
-  setFields: Function;
-  setFieldsInitialValue: Function;
-  getFieldDecorator: Function;
-  getFieldProps: Function;
-  getFieldsError: Function;
-  getFieldError: Function;
-  isFieldValidating: Function;
-  isFieldsValidating: Function;
-  isFieldsTouched: Function;
-  isFieldTouched: Function;
-  isSubmitting: Function;
-  submit: Function;
-  validateFields: Function;
-  resetFields: Function;
-}
-
-interface IndexProps {
-  location: {
-    search: string;
-    query: {
-      campaignId?: string;
-      token?: string;
-      linkId?: string;
-      channel?: string;
-    };
-  };
-}
-
-interface ResponseProps {
-  status?: number;
-  resultCode: number;
-  errorMsg: string;
-}
-
-interface OptionsProps {}
-
-interface SuccessProps {}
-
-interface ContentComponentProps {
-  loadText: string;
-  loadImage: string;
-  textCls: string;
-  imageCls: string;
-}
-
-/**
- * 组件信息
- */
-interface ComponentInfo {
-  campaignId: string; // 活动id
-  moduleContent: string; // 组件内容
-  moduleSubType: number; // 组件子类型
-  moduleType: number; // 组件类型
-}
-
-/**
- * 活动信息
- */
-interface Campaign {
-  campId: string; // 活动id
-  campaignTitle: string; // 活动title
-  campaignType: number; // 活动类型
-  hasIntroduce?: boolean; // 有无介绍页
-}
-
-interface CampaignResp extends Campaign {
-  pageData: ComponentInfo[];
-  skuData: SkuProps[];
-}
-
-interface ContextWithReducer<T> {
-  state: T;
-  dispatch: Function;
-}
-
-interface SkuProps {
-  btnIcon: string; // 按钮图片
-  campaignSkuName: string; // sku营销名称
-  campaignSkuUrl: string; // sku营销图片
-  courseId: string; // 课程编号
-  saleTitle: string; // 课程名称
-  needShip: boolean; // 需要发货
-  originalPrice: number; // 划线价
-  price: number; // sku价格
-  skuId: string; // skuId
-  id: number; // 售货单id
-}
-
-interface SoldSkuProps {
-  id: number; // 售货单id
-  paidAmount: number | null; // 已支付金额(单位:分)
-  settleFee: number | null; // 订单总金额(单位:分)
-  courseId: string; // 课程编号
-  saleTitle: string; // 销售商品名称(课程名称)
-  payStateInt: number; // 支付状态(2:待支付|3:已支付)
-  needShip: boolean; // 需要发货
-  skuId: string; // skuId
-}
-
-interface SkuDetailProps {
-  campaignId: string; // 活动id
-  countDownType: number; // 倒计时类型(0:无倒计时|1:时间倒计时|2:名额倒计
-  courseSaleUrl: string; // 营销图片
-  campaignSkuName: string; // sku营销名称
-  courseId: string; // 课程编号
-  courseName: string; // 课程名称
-  needShip: boolean; // 需要发货
-  originalPrice: number; // 划线价
-  price: number; // sku价格
-  skuId: string; // skuId
-}
-
-interface PersonCountState {
-  left: number; // 剩余名额
-  total?: number; // 总名额
-}
-
-interface TimeLeft {
-  deltaHours?: number; // 剩余小时
-  deltaMinutes: number; // 剩余分钟
-  deltaSeconds: number; // 剩余秒
-}
-
-interface SkuModalProps {
-  visible: boolean;
-  onClose: () => void;
-  onSelect: Function;
-  skuList: SkuProps[];
-  title?: string;
-  tips?: string;
-}
-
-interface AddressSrc {
-  value: number;
-  label: string;
-  children: AddressSrc[];
-}
-
-/**
- * 确认支付页的url参数
- */
-interface ConfirmPageQuery {
-  sid: string; // sku id
-  campId: string; // 活动id
-  token: string; // 预览活动的token
-  linkId: string; // 正式活动的链接id
-  csId: string; // 课程id
-  preOId: string; // 订单id
-  ordId: string; // h5支付后redirect_url添加的预付单id
-  chCode: string; // checkCode用于后续查询支付结果
-  pToken: string; // 支付的token
-  vPhone: string; // 支付的手机号
-  vCode: string; // 支付的验证码
-  enPrm: string; // encode后的参数
 }
 
 interface HandledRes extends ExtensiveObject {
@@ -210,126 +47,148 @@ interface HandledRes extends ExtensiveObject {
   loadingText?: string;
 }
 
-interface ErrorProps {
-  title: string;
-  description: string;
-  subTitle: string;
-  subDescription: string;
+interface ProductInfo {
+  productTitle: string; // 商品名称
+  shareImageUrl: string; // 分享缩略图
+  shareName: string; // 分享描述
 }
 
-interface TeacherInfo {
-  active: boolean; // 是否激活
-  nickname: string;
-  courseName: string;
-  wechatQr: string;
-  'wechatQr-aliyun': string; // aliyun真实图片地址
-  hasNewCourse: boolean; // 是否为新领的课程(true:新领的课|false:老的课)
-  miniMpName: string; // 小程序名称
-  miniMpQrCode: string; // 小程序二维码
+/**
+ * 当前用户的用户优惠信息
+ */
+interface ProductPromotionResp {
+  activityName: string; // 指定活动名称
+  minPromotionAmount: number; // 最低售价(单位:元)
+  promotionActivityEndTime: number; // 指定用户优惠结束时间
+  promotionValue: number; // 指定用户优惠金额(立减金额，单位:元)
+  skuSamePrice: boolean; // 全部sku统一售价
 }
 
-interface TeacherOtherResult {
-  courseName: string;
-  status: string;
-  description: string;
+/**
+ * sku商品对应的指定用户活动信息
+ */
+interface SkuPromotionResp {
+  activityPromotionName: string; // 指定用户优惠名称
+  activityPromotionPrice: number; // 指定用户优惠价格,单位分
+  activityPromotionValue: number; // 指定用户优惠金额,单位分
+  limitedTimePromotionPrice: number; // 限时优惠价,单位分
+  promotionType: number; // 优惠类型。1立减，2限时优惠
 }
 
-interface TeacherResult {
-  imgUrl: string;
-  teachers: TeacherInfo[];
+/**
+ * 单个sku商品
+ */
+interface SkuSaleResp {
+  id: number; // sku id
+  imageUrl: string; // sku图片
+  price: number; // sku售价
+  promotionPrice: number; // sku优惠价
+  skuName: string; // sku名称
+  skuPromotionResp?: SkuPromotionResp; // sku商品对应的指定用户活动信息
+  stock: number; // sku库存
 }
 
-interface ErrInfo {
-  errCode?: number;
-  errMsg: string;
-  description: string;
+interface PageDetail {
+  hasActivityPromoting: boolean; // 该用户是否有用户促销活动（判断：有对应活动名和活动价格）
+  freight: number; // 运费(单位:元)
+  originalPriceMax: number; // 商品最大划线价(单位:元)
+  originalPriceMin: number; // 商品最小划线价(单位:元)
+  priceMax: number; // 商品最大价格(单位:元)
+  priceMin: number; // 商品最小价格(单位:元)
+  productPromotionResp: ProductPromotionResp; // 用户优惠
+  productState: number; // 商品状态:3-售卖中,4-已下架
+  productTitle: string; // 商品长标题
+  projectId?: number; // 项目ID
+  promotionPriceMax: number; // 商品最大优惠价格(单位:元)
+  promotionPriceMin: number; // 商品最小优惠价格(单位:元)
+  shareImageUrl: string; // 分享图URL
+  shareName: string; // 分享文案
+  shipmentType: number; // 配送模式:1-无需配送,2-普通快递
+  stock: number | null; // 库存数量
+  videoHeadImageUrl: string; // 视频封面图URL
 }
 
-interface Info {
-  url: string;
-  name: string;
+/**
+ * 处理后的商品详情数据
+ */
+interface ProductDetail extends PageDetail {
+  id: number; // 商品ID
+  userId: number | null; // 用户id
+  courseVideo: string;
+  promoteStatus: -1 | 0 | 1 | 2; // 0默认值未开始，或结束，1促销开始，2促销中
+  flashSaleEndSec: number; // 限时优惠距当前的结束秒数,0表示当前没有限时优惠
+  flashSaleStartSec: number; // 限时优惠距当前的开始秒数
+  imageUrls: string[];
+  detailHtml: string; // 详情图html字符串
+  productDesc: string; // 商品说明（多个以’,’隔开）
+  productLabel: string; // 营销标签（多个以’,’隔开）
+  productName: string; // 商品短标题
+  projectId: number; // 项目ID
+  skuList: SkuSaleResp[]; // sku商品列表
+  videoUrl: string; // 视频URL
 }
 
-interface AddressFormState {
-  id?: number | null;
-  name: string;
-  phone: string;
-  districtCode: Array<number>;
-  districtName: string[];
-  addressDetail: string;
-  isDefault: boolean;
+interface ProcessedDetail {
+  detail: PageDetail;
+  carouseVideo: string;
+  currentIsVideo: boolean;
+  detailHtml: string;
+  carouselList: string[]; // 商品的轮播图
+  skuList: SkuSaleResp[]; // sku商品列表
+  tags: string[]; // 营销标签通过productLabel计算出
+  descs: string[]; // 商品说明通过productDesc计算出
+  skuDetail: SkuSaleResp;
+  promoteStatus: number;
+  timetext: string;
+  timedown: number;
+  formattext: string;
 }
 
-interface AddressFormProps {
-  form: RcForm;
-  orderParams: any;
-  formState: AddressFormState;
+interface HotUserOrigin {
+  orderCreationTime: number;
+  userId: number;
+  userName: string;
 }
 
-interface ActiveModalState {
-  visible: boolean;
-  data: SkuProps[];
-}
-
-interface WeChatInfo {
-  info: Info | null;
-}
-
-interface CodeVerifyProps {
-  phoneCode: { phone: string; code: string };
-  onPhoneCodeChange: Function;
-  location: { pathname: string };
-}
-
-interface PayLoadingProps {
-  visible: boolean;
-  onClose: () => void;
-  onPaid: () => void;
-  toRePay: () => void;
-}
-
-interface ModalCommonProps {
-  visible: boolean;
-  title: React.ReactNode;
-  content: React.ReactNode;
-  cancelText?: string;
-  onClose?: () => void;
-  onOk?: () => void;
-}
-
-interface ConfirmProps {
-  location: {
-    pathname: string;
-    query: ConfirmPageQuery;
-  };
-}
-
-interface SkuListProps {
-  skuList: SkuProps[];
-  onSelect: Function;
-}
-
-interface PhoneItem {
-  phone: string;
+interface HotUser extends HotUserOrigin {
   time: string;
+  id: number;
+  user: string;
 }
 
-interface FrontErrorResp {
-  flagCode: number;
-  frontUserResp: { avatarUrl: string; nickname: string };
-  frontAppletResp: { url: string; name: string };
+interface AddressInfo {
+  addressDetail: string;
+  areaRegionId: number;
+  areaRegionName: string;
+  cityRegionId: number;
+  cityRegionName: string;
+  id: number;
+  isDefault: boolean;
+  provinceRegionId: number;
+  provinceRegionName: string;
+  recipientName: string;
+  recipientPhone: string;
+  streetRegionId: number | null;
+  streetRegionName: string | null;
+  userId: number;
 }
 
-interface ActivateModalProps {
-  needShip: boolean;
-  courseName: string;
-  courseId: string;
-  soldNoteId: number;
-  setActivateModal: React.Dispatch<React.SetStateAction<ModalCommonProps>>;
+interface SubItem {
+  id: string;
+  skuName: string;
+  categoryType: string;
+  gift: string;
+  itemType: number;
+  quantity: string;
+  requestType?: string;
 }
 
-interface QRCodeModal {
-  qrCode: string;
-  visible: boolean;
-  onClose: () => void;
+interface RefundDetail {
+  requestType: string;
+}
+
+interface DetailList {
+  type: string;
+  subItems: SubItem[];
+  refundDetail?: RefundDetail;
 }

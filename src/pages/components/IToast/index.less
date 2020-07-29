@@ -1,0 +1,43 @@
+.iToastMask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.iToast {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto;
+    max-width: 400px;
+    margin: -50% -50% 0;
+    padding: 62px 32px;
+    font-size: 36px;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 40px;
+    p {
+      margin: 0;
+      img {
+        width: 84px;
+        height: 84px;
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

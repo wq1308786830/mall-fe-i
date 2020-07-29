@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="8px" viewBox="0 0 6 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Form/icon/icon-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="商城" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="已支付且已转单订单详情" transform="translate(-105.000000, -616.000000)" fill="#FD4E21" fill-rule="nonzero">
+            <g id="list-goods-detail-refund" transform="translate(0.000000, 527.000000)">
+                <g id="bar">
+                    <g id="info" transform="translate(20.000000, 51.000000)">
+                        <g id="Group-3" transform="translate(0.000000, 31.000000)">
+                            <g id="Form/icon/icon-arrow" transform="translate(79.000000, 3.000000)">
+                                <path d="M7.6401844,4.36682033 L11.0781345,7.23177872 C11.5024114,7.5853428 11.5597354,8.2159075 11.2061713,8.6401844 C11.1674521,8.68664746 11.1245975,8.72950206 11.0781345,8.76822128 L7.6401844,11.6331797 C7.2159075,11.9867437 6.5853428,11.9294197 6.23177872,11.5051428 C6.08201622,11.3254278 6,11.0988949 6,10.8649584 L6,5.13504161 C6,4.58275686 6.44771525,4.13504161 7,4.13504161 C7.23393651,4.13504161 7.4604694,4.21705783 7.6401844,4.36682033 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

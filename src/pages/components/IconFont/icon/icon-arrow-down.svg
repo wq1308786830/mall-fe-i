@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Form/icon/arrow-down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Form/icon/arrow-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4.13504161,5 L9.86495839,5 C10.4172431,5 10.8649584,5.44771525 10.8649584,6 C10.8649584,6.23393651 10.7829422,6.4604694 10.6331797,6.6401844 L7.76822128,10.0781345 C7.4146572,10.5024114 6.7840925,10.5597354 6.3598156,10.2061713 C6.31335254,10.1674521 6.27049794,10.1245975 6.23177872,10.0781345 L3.36682033,6.6401844 C3.01325625,6.2159075 3.07058032,5.5853428 3.49485721,5.23177872 C3.67457221,5.08201622 3.90110511,5 4.13504161,5 Z" id="arrow" fill="#B3C8D3" fill-rule="nonzero"></path>
+    </g>
+</svg>

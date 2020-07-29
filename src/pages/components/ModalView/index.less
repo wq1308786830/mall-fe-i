@@ -1,0 +1,63 @@
+@import '../../base.less';
+
+.modalAlert {
+  :global {
+    .am-modal-close {
+      top: 0;
+      right: 0;
+      width: 88px;
+      height: 88px;
+      > .am-modal-close-x {
+        width: 88px;
+        height: 88px;
+      }
+    }
+    .am-modal-title {
+      padding-top: 72px;
+      padding-bottom: 50px;
+    }
+    .am-modal-button-group-normal {
+      margin-top: 0;
+    }
+    .am-modal-button {
+      .baseBtn();
+
+      &:first-child {
+        margin-right: 30px;
+        background: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1534px) {
+  .modalAlert {
+    left: 20%;
+    width: 60%;
+
+    :global {
+      .am-modal-title {
+        padding: 50px 0 40px 0;
+        font-size: 36px;
+      }
+      .am-modal-close {
+        top: 8px;
+        right: 8px;
+        width: 48px;
+        height: 48px;
+        .am-modal-close-x {
+          .iconClose();
+
+          width: 48px;
+          height: 48px;
+        }
+      }
+      .am-modal-footer {
+        padding-bottom: 20px;
+      }
+      .am-modal-body {
+        font-size: 24px;
+      }
+    }
+  }
+}

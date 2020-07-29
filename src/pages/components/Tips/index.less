@@ -1,0 +1,25 @@
+@import '~antd-mobile/lib/style/themes/default.less';
+.tipsWp {
+  position: fixed;
+  top: 20%;
+  z-index: @modal-zindex + 1;
+  display: none;
+  width: 100%;
+  text-align: center;
+  .tipsZone {
+    display: inline-block;
+    height: 60px;
+    padding: 20px 40px;
+    line-height: 60px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    box-shadow: 0 16px 20px 0 rgba(10, 31, 68, 0.1), 0 0 2px 0 rgba(10, 31, 68, 0.08);
+    .text {
+      color: rgba(40, 40, 40, 1);
+      font-weight: 400;
+    }
+  }
+  &.visible {
+    display: block;
+  }
+}

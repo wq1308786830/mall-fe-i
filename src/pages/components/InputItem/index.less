@@ -1,0 +1,63 @@
+.numberInput {
+  .decrease,
+  .increase,
+  .input {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 76px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 76px;
+    text-align: center;
+    background: rgba(240, 243, 245, 1);
+    border: 2px solid rgba(240, 243, 245, 1);
+    border-radius: 40px;
+  }
+  .input {
+    position: relative;
+    box-sizing: content-box;
+    width: 140px;
+    min-width: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+    input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      box-sizing: content-box;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 32px;
+      text-align: center;
+      background: none;
+      border: none;
+    }
+  }
+  .decrease,
+  .increase {
+    position: relative;
+    width: 76px;
+    overflow: hidden;
+    svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &.disabled {
+      background: #f5f8fb;
+      border: 2px solid rgba(240, 243, 245, 1);
+      svg {
+        opacity: 0.2;
+      }
+    }
+  }
+}

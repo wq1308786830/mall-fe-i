@@ -1,0 +1,117 @@
+.detailListZone {
+  padding: 0 46px;
+  background-color: #fff;
+
+  .lineThroughText {
+    position: relative;
+    text-align: center;
+
+    span {
+      &:first-child {
+        position: relative;
+        z-index: 1;
+        padding: 0 8px;
+        color: rgba(74, 74, 74, 1);
+        font-size: 24px;
+        line-height: 34px;
+        background-color: #fff;
+      }
+      &:last-child {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        left: 0;
+        z-index: 0;
+        border-bottom: 2px solid #f0f3f5;
+      }
+    }
+  }
+  .listWrap {
+    padding-bottom: 56px;
+    padding-left: 10px;
+  }
+
+  .bottom {
+    padding-top: 30px;
+    .item {
+      .dot {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        color: #8faebe;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+        background: #f1f7fd;
+        border-radius: 16px;
+      }
+
+      .skuName {
+        width: 468px;
+        height: 40px;
+        margin-left: 4px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      .arrayRed {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        margin: 0 12px 0 20px;
+      }
+      .sign {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 4px 8px;
+        color: rgba(143, 174, 190, 1);
+        font-weight: 400;
+        font-size: 20px;
+        border: 1px solid rgba(179, 200, 211, 1);
+        border-radius: 4px;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.number {
+  color: rgba(128, 128, 128, 1);
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.qrUrlWrap {
+  img {
+    width: 60%;
+    margin-top: 20px;
+  }
+  span {
+    color: #426bb4;
+    text-decoration: underline;
+  }
+}
+
+.qrWrap {
+  padding: 80px 0;
+
+  .text {
+    font-size: 34px;
+  }
+  img {
+    width: 60%;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1534px) {
+  .qrWrap {
+    padding: 40px 0;
+    img {
+      width: 70%;
+    }
+  }
+}

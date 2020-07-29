@@ -1,0 +1,89 @@
+@import '../../../base.less';
+
+:global {
+  .am-modal {
+    width: 670px;
+  }
+
+  .am-modal-content {
+    padding: 0 !important;
+    border-radius: 40px !important;
+  }
+
+  .am-modal-header {
+    padding: 0;
+  }
+
+  .am-modal-title {
+    padding-top: 102px;
+    padding-bottom: 88px;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  .am-modal-body {
+    padding: 0 56px 58px 60px !important;
+  }
+}
+
+.fixedClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88px;
+  height: 88px;
+}
+
+.modalItemGroup {
+  padding-top: 50px;
+  padding-bottom: 38px;
+  border-bottom: 4px solid #e6edf2;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:nth-child(2) {
+    padding-bottom: 62px;
+    border-bottom: none;
+  }
+
+  .flexItemLeft {
+    flex: unset;
+    margin-right: 36px;
+
+    img {
+      width: 68px;
+      height: 70px;
+    }
+  }
+
+  .flexItemRight {
+    margin: 0;
+    color: #111315;
+    font-size: 34px;
+    line-height: 48px;
+
+    h3 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 10px 0 0;
+      font-weight: 400;
+      span {
+        margin: 0 6px;
+        font-weight: bold;
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
+
+.btnWarn {
+  height: 100px;
+  color: #fff;
+  background: #fd4e21;
+  border-radius: 50px;
+}

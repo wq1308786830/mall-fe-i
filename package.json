@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@woulsl/storage": "^3.1.1-canary.1",
     "antd-mobile": "^2.3.3",
     "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "html2canvas": "^1.0.0-rc.5",
     "lib-flexible": "^0.3.2",
     "query-string": "^6.13.1",
     "react": "^16.13.1",

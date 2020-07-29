@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-rightwhite</title>
+    <g id="优化" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="状态" transform="translate(-72.000000, -45.000000)" fill="#FFFFFF">
+            <g id="编组-2">
+                <g id="arrow-rightwhite" transform="translate(72.000000, 45.000000)">
+                    <g id="arrow">
+                        <path d="M0.135041613,2 L5.86495839,2 C6.41724314,2 6.86495839,2.44771525 6.86495839,3 C6.86495839,3.23393651 6.78294217,3.4604694 6.63317967,3.6401844 L3.76822128,7.07813446 C3.4146572,7.50241136 2.7840925,7.55973543 2.3598156,7.20617134 C2.31335254,7.16745212 2.27049794,7.12459753 2.23177872,7.07813446 L-0.633179667,3.6401844 C-0.986743748,3.2159075 -0.929419684,2.5853428 -0.505142787,2.23177872 C-0.325427786,2.08201622 -0.0988948924,2 0.135041613,2 Z" transform="translate(3.000000, 5.000000) rotate(-90.000000) translate(-3.000000, -5.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

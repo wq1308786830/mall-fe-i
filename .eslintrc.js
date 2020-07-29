@@ -8,18 +8,14 @@ module.exports = {
     react: {
       version: '16.9',
     },
-    umi: {
-      version: '2.8',
-    },
   },
   globals: {
-    __UMI_BIGFISH_COMPAT: true,
-    __UMI_HTML_SUFFIX: true,
     __dirname: true,
     WeixinJSBridge: true,
     ENV_DEBUG: true,
     ENV_NAME: true,
     gio: true,
+    history: true,
   },
   rules: {
     'jsx-a11y/href-no-hash': [0],

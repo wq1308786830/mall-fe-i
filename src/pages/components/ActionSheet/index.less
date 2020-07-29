@@ -1,0 +1,41 @@
+@import '~antd-mobile/lib/style/themes/default.less';
+@ActionSheetPrefixCls: am-action-sheet;
+
+:global(.@{ActionSheetPrefixCls}) {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: @fill-base;
+  &-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @action-sheet-zindex;
+    overflow: auto;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @action-sheet-zindex;
+    height: 100%;
+    background-color: @fill-mask;
+
+    &-hidden {
+      display: none;
+    }
+  }
+  // 隐藏掉 dialog 默认的 x 按钮
+  &-close {
+    display: none;
+  }
+}
